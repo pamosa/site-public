@@ -12,11 +12,6 @@
 <meta property="og:image" content="https://minervinhacavalos.shop/cavalo-pelagem-cpt.jpg">
 <meta property="og:url" content="https://minervinhacavalos.shop">
 <meta property="og:type" content="website">
-
-<!-- Preload the images to improve loading time -->
-<link rel="preload" as="image" href="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia16043/caracteristicas-cavalos-saudaveis-artigos-cursos-cpt.jpg">
-<link rel="preload" as="image" href="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/cavalo.jpg">
-
 <script>
     const imageUrls = [
         'https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia16043/caracteristicas-cavalos-saudaveis-artigos-cursos-cpt.jpg',
@@ -81,13 +76,11 @@
         if (isCentauroMode) {
             frase = frase.replace(/cavalos/g, "centauros").replace(/cavalo/g, "centauro");
         }
-        // Adiciona quebra de linha após cada ponto final
-        frase = frase.replace(/\./g, '.<br>');
         return frase;
     }
 
     function updateFrase() {
-        document.getElementById("frase").innerHTML = getFrase(); // Usar innerHTML para renderizar o <br>
+        document.getElementById("frase").textContent = getFrase();
     }
 
     function getRandomImageUrl() {
@@ -105,7 +98,7 @@
 
     function toggleCentauroMode() {
         isCentauroMode = !isCentauroMode;
-        const centauroButtonText = isCentauroMode ? "Ativar Modo Cavalos 🎀" : "ATIVAR MODO CENTAURO ☠️";
+        const centauroButtonText = isCentauroMode ? "Ativar Modo Cavalos 🎀" : "ATIVAR MODO CENTAURO piroca ☠️";
         const randomImageButtonText = isCentauroMode ? "UM NOVO CENTAURO PRO MINERVINHA" : "um novo cavalo para o minervinha";
         document.getElementById("centauroModeButton").textContent = centauroButtonText;
         document.getElementById("randomImageButton").textContent = randomImageButtonText;
@@ -154,7 +147,7 @@
 <body>
 <button id="centauroModeButton" onclick="toggleCentauroMode()" style="background-color: black; color: white; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); padding: 10px 20px; font-size: 1em; cursor: pointer; border: none; border-radius: 5px; margin-bottom: 20px;">ATIVAR MODO CENTAURO ☠️</button>
 <div class="centered" style="padding-top: 80px;">
-    <img id="randomImage" alt="minervinha" loading="lazy">
+    <img id="randomImage" alt="minervinha">
     <p id="frase"></p>
     <button id="randomImageButton" onclick="loadNextImage()">um novo cavalo para o minervinha</button>
     <button id="darkModeButton" onclick="toggleDarkMode()">Ativar Dark Mode</button>
