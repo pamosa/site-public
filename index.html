@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Os Cavalinhos do Minerva</title>
+<link rel="stylesheet" href="styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4484920950054333"
+     crossorigin="anonymous"></script>
+<meta property="og:title" content="Os Cavalinhos do Minerva">
+<meta property="og:description" content="Um site em memória de nosso amigo... Eric Minerva.">
+<meta property="og:image" content="https://minervinhacavalos.shop/cavalo-pelagem-cpt.jpg">
+<meta property="og:url" content="https://minervinhacavalos.shop">
+<meta property="og:type" content="website">
+
+<!-- Preload the images to improve loading time -->
+<link rel="preload" as="image" href="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia16043/caracteristicas-cavalos-saudaveis-artigos-cursos-cpt.jpg">
+<link rel="preload" as="image" href="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/cavalo.jpg">
+
+<script>
+    const imageUrls = [
+        'https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia16043/caracteristicas-cavalos-saudaveis-artigos-cursos-cpt.jpg',
+        'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/cavalo.jpg',
+        'https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia25135/cavalo-pelagem-cpt.jpg',
+        'https://super.abril.com.br/wp-content/uploads/2022/07/SI_441_ORCL_potencia_site.jpg?quality=90&strip=info&w=720&h=440&crop=1',
+        'https://blog.7mboots.com.br/wp-content/uploads/2020/06/the-black-horse-of-the-frisian-breed-walks-in-the-P77UURU_Easy-Resize.com_.jpg',
+        'https://static.wikia.nocookie.net/mundo-animal/images/a/a1/Cavalos-selvagens-cavlos.jpg/revision/latest?cb=20140328222555&path-prefix=pt',
+        'https://vedovatipisos.com.br/wp-content/uploads/2016/10/4.jpg',
+        'https://www.petz.com.br/blog/wp-content/uploads/2022/06/por-que-cavalo-usa-ferradura-2.jpg',
+        'https://files.agro20.com.br/uploads/2019/09/cavalo-3-1024x576.jpg',
+        'https://framerusercontent.com/images/hJdquuZWHdjptkuBFuSnd4snRLs.jpg',
+        'https://fazendadaroseta.com.br/wp-content/uploads/2021/02/cavalos-mais-bonitos-do-mundo.jpg',
+        'https://framerusercontent.com/images/of2Zi78PVMok6TmLryQLI7djbt0.jpeg',
+        'https://www.infoescola.com/wp-content/uploads/2008/05/cavalo-143531608.jpg',
+        'https://premix.com.br/blog/wp-content/uploads/2021/03/racas_cavalo_thumbnail.png',
+        'https://www.cavaloatleta.com.br/wp-content/uploads/2023/01/cavalodeesporte.jpg',
+        'https://blog.cobasi.com.br/wp-content/uploads/2023/05/quantos-anos-vive-cavalo-capa.webp',
+        'https://www.comprerural.com/wp-content/uploads/2023/07/cavalo-1-750x430.jpg',
+        'https://blog.buscarrural.com/wp-content/uploads/2021/02/cavalo-campolina-1.jpg',
+        'https://www.jornalopcao.com.br/wp-content/uploads/2024/02/Gypsy-Vanner-e-grande-na-altura-e-na-docilidade-01-Karakal-1-1.jpg.webp',
+        'https://kinghorse.com.br/wp-content/uploads/2018/03/racas-de-cavalo.jpg',
+        'https://i0.wp.com/zootecniabrasil.com/wp-content/uploads/2023/06/lipizzan-cavalo-diferente.jpg?fit=851%2C567&ssl=1',
+        'https://quero-ser-veterinario.s3.amazonaws.com/wp-content/uploads/queroserveterinario/destaque-cavalo-puro-sangue.webp',
+        'https://www.lancerural.com.br/wp-content/uploads/2020/03/febrecavalo-scaled.jpg'
+    ];
+
+    const centauroImageUrls = [
+        'https://deusesgregos.com.br/wp-content/uploads/2023/06/centauromitologia1.jpg',
+        'https://deusesgregos.com.br/wp-content/uploads/2023/06/centauromitologia1.jpg',
+        'https://segredosdomundo.r7.com/wp-content/uploads/2020/05/centauro-origem-do-migo-representacoes-e-principal-figura-1.jpg',
+        'https://pm1.aminoapps.com/7041/334f3d6571fa0d3a5bd4f9241e246b87c1bc6367r1-424-512v2_00.jpg',
+        'https://super.abril.com.br/wp-content/uploads/2018/07/5672e0730e2163522f019a04harry-potter.jpeg',
+        'https://www.mitografias.com.br/wp-content/uploads/2015/06/Centauro-01.jpg',
+        'https://pm1.aminoapps.com/6535/a7c6c31f0c5a02c261a3200d965942787800a27b_00.jpg',
+        'https://i.pinimg.com/550x/5d/bb/b8/5dbbb8afe56fe5c315ef6d1d16ce069e.jpg',
+        'https://mitologiaclasica.com/wp-content/uploads/2024/02/centauro.jpg',
+        'https://c.wallhere.com/photos/29/24/fantasy_art_Centaur-193205.jpg!d',
+        'https://mediafiles.fartice.com/imfls/97a5afea3d6a207c.jpg',
+        'https://www.greenme.com.br/wp-content/uploads/2020/11/centauro-2.jpg',
+        'https://i.pinimg.com/236x/cb/0a/e0/cb0ae0072f84bdbabd1fb6b58d675ee4.jpg',
+        'https://i.pinimg.com/236x/50/dd/49/50dd49f3c84c0ae08c5473f82f59bbe8.jpg',
+        'https://i.pinimg.com/236x/cb/0a/e0/cb0ae0072f84bdbabd1fb6b58d675ee4.jpg'
+    ];
+
+    const frasesCavalo = [
+        "Minerva sempre foi conhecido pela sua astúcia e força, mas ao lado dos cavalos, ele encontrou uma conexão única, onde força e velocidade se uniam em perfeita harmonia.",
+        "Os cavalos corriam livres pelos campos, e Minerva os observava com admiração. Ele sabia que não poderia dominá-los, mas respeitava sua liberdade e espírito indomável.",
+        "Minerva não temia a batalha, mas ao ver os cavalos correndo, ele percebeu que às vezes a verdadeira força está em saber quando seguir em frente e quando parar.",
+        "Os cavalos eram rápidos, e Minerva, sábio. Ele entendeu que não precisava vencê-los, mas sim aprender com eles, adaptando sua força à velocidade do tempo.",
+        "Minerva, em sua grandeza, não viu nos cavalos adversários, mas companheiros de jornada. Juntos, seguiram caminhos que ninguém havia trilhado antes.",
+        "Na corrida da vida, Minerva e os cavalos seguiam em ritmos diferentes. Ele, com sua sabedoria, compreendia que não se tratava de vencer, mas de viver cada momento.",
+        "Os cavalos o ultrapassaram, mas Minerva não se importou. Ele sabia que sua força não estava na velocidade, mas na resistência ao longo do tempo.",
+        "Minerva viu os cavalos passarem e entendeu que não se trata sempre de ser o primeiro, mas de apreciar o caminho, mesmo quando outros estão à frente.",
+        "Ele era bom mesmo?\nQuem? O Minerva? Ah, ele foi ótimo, um lutador perfeito, ninguém foi melhor que ele\nE como os cavalos venceram ele?\nO tempo venceu ele... o tempo vence todo mundo, é invencível..."
+    ];
+
+    let isCentauroMode = false;
+
+    function getFrase() {
+        let frase = frasesCavalo[Math.floor(Math.random() * frasesCavalo.length)];
+        if (isCentauroMode) {
+            frase = frase.replace(/cavalos/g, "centauros").replace(/cavalo/g, "centauro");
+        }
+        // Adiciona quebra de linha após cada ponto final
+        frase = frase.replace(/\./g, '.<br>');
+        return frase;
+    }
+
+    function updateFrase() {
+        document.getElementById("frase").innerHTML = getFrase(); // Usar innerHTML para renderizar o <br>
+    }
+
+    function getRandomImageUrl() {
+        const randomIndex = Math.floor(Math.random() * (isCentauroMode ? centauroImageUrls.length : imageUrls.length));
+        return isCentauroMode ? centauroImageUrls[randomIndex] : imageUrls[randomIndex];
+    }
+
+    function loadNextImage() {
+        const imageUrl = getRandomImageUrl();
+        const imageElement = document.getElementById("randomImage");
+
+        imageElement.src = imageUrl;
+        updateFrase();
+    }
+
+    function toggleCentauroMode() {
+        isCentauroMode = !isCentauroMode;
+        const centauroButtonText = isCentauroMode ? "Ativar Modo Cavalos 🎀" : "ATIVAR MODO CENTAURO ☠️";
+        const randomImageButtonText = isCentauroMode ? "UM NOVO CENTAURO PRO MINERVINHA" : "um novo cavalo para o minervinha";
+        document.getElementById("centauroModeButton").textContent = centauroButtonText;
+        document.getElementById("randomImageButton").textContent = randomImageButtonText;
+        updateFrase();
+        loadNextImage();
+    }
+
+    function toggleDarkMode() {
+        const body = document.body;
+        const isDarkMode = body.classList.toggle("dark-mode");
+
+        const buttonText = isDarkMode ? "Ativar White Mode" : "Ativar Dark Mode";
+        document.getElementById("darkModeButton").textContent = buttonText;
+
+        updateCentauroButtonColor();
+        localStorage.setItem('darkMode', isDarkMode);
+    }
+
+    function updateCentauroButtonColor() {
+        const isDarkMode = document.body.classList.contains("dark-mode");
+        const centauroButton = document.getElementById("centauroModeButton");
+        
+        centauroButton.style.backgroundColor = isDarkMode ? "white" : "black";
+        centauroButton.style.color = isDarkMode ? "black" : "white";
+    }
+
+    function applySavedMode() {
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode");
+            document.getElementById("darkModeButton").textContent = "Ativar White Mode";
+        } else {
+            document.body.classList.remove("dark-mode");
+            document.getElementById("darkModeButton").textContent = "Ativar Dark Mode";
+        }
+
+        updateCentauroButtonColor();
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        applySavedMode();
+        loadNextImage();
+    });
+</script>
+</head>
+<body>
+<button id="centauroModeButton" onclick="toggleCentauroMode()" style="background-color: black; color: white; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); padding: 10px 20px; font-size: 1em; cursor: pointer; border: none; border-radius: 5px; margin-bottom: 20px;">ATIVAR MODO CENTAURO ☠️</button>
+<div class="centered" style="padding-top: 80px;">
+    <img id="randomImage" alt="minervinha" loading="lazy">
+    <p id="frase"></p>
+    <button id="randomImageButton" onclick="loadNextImage()">um novo cavalo para o minervinha</button>
+    <button id="darkModeButton" onclick="toggleDarkMode()">Ativar Dark Mode</button>
+</div>
+</body>
+</html>

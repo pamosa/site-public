@@ -1,0 +1,71 @@
+/* Estilo específico para as imagens */
+img {
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessário */
+    height: auto;
+    max-height: 400px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner sem distorcer */
+    margin-bottom: 20px;
+}
+
+/* Estilos gerais para o layout */
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode p {
+    color: white;
+}
+
+.dark-mode button {
+    color: white;
+}
+
+/* Estilos para os botões */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Estilo do botão verde */
+#randomImageButton {
+    background-color: #4CAF50; /* Verde */
+}
+
+/* Estilo do botão de modo escuro */
+#darkModeButton {
+    background-color: #555; /* Cinza */
+}
+
+/* Ajustes de responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    img {
+        width: 100%; /* Ajusta a largura para caber em telas menores */
+        height: auto; /* Mantém a proporção correta */
+    }
+
+    .centered {
+        padding: 10px;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+}
